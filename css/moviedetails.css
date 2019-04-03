@@ -1,0 +1,105 @@
+body{
+	width:100%;
+	background-color: #000;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.3em;
+    font-size:16px;
+}
+
+.nav-item a{
+	text-transform: uppercase;
+	color : #000 !important;
+	
+}
+.nav-item a:hover, .nav-item a:active{
+	border: 1px solid #fff;
+	
+}
+
+.navigation {
+    margin: auto;
+    background-color: #eeeeee;
+}
+.whatison{
+	padding-top:15px;
+	padding-bottom:15px;
+	background-color: #fff;
+	color:#000;
+}
+#image{
+  height: 300px;
+  position: relative;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3), 0 8px 6px rgba(0, 0, 0, 0.2);
+}
+.imagedesc{
+	border:1px solid #000;
+	
+}
+.imadesccontent{
+	padding-left:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.desc{
+	padding-top:35px;
+	padding-bottom:15px;
+}
+
+
+.wrapper{
+	 display: flex;
+     flex-flow: row wrap;
+     justify-content: space-around;
+}
+
+// ---------------------------Footer-------------------------------------
+.page-footer{
+	    background: black;
+    color: white;
+}
+.list-unstyled a, .footer-copyright a{
+	text-decoration:none;
+	color:#fff;
+}
+.list-unstyled a:hover {
+	text-decoration:none;
+	color:#e24e3e;
+}
+.list-unstyled i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+
+/ Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+	#image{
+		max-width: 100%;
+		height: 120%;
+	}
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+	#image{
+		max-width: 100%;
+		height: 120%;
+	}
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SITE TITTLE -->
+  <title>Brooklyn Outdoor Film Festival</title>
+  <!-- bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+  <!-- CUSTOM CSS -->
+  <link href="css/moviedetails.css" type="text/css" rel="stylesheet">
+  
+</head>
+	<body class="container" id="cont">
+		
+		<nav class=" navigation navbar navbar-expand-lg navbar-light " id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">Brooklyn Outdoor Film Festival</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#moviesschedule">Movies</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link " data-toggle="modal" data-target="#exampleModal" >Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	<span class="clearfix"></span>
+	<hr/>
+       <!-- Header -->
+    <div class="col-12 whatison">
+		<div class="imagedesc">
+		<div class="row imadesccontent">
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<div id="image"></div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6">
+				<h3 id="title"></h3>
+				<p id = "date"></p>
+				<p id="showtime"></p>
+				<p id="type"></p>
+				<p id="author"></p>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+					<h3>Synopsis</h3>
+					<p id="synopsis"></p>
+			</div>
+		</div>
+		</div>
+		<span class="clearfix"></span>
+		<div class="row desc">
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<div class="col-12">
+					<h3>Cast</h3>
+					<p id="cast"></p>
+				</div>
+				<span class="clearfix"></span>
+				<div class="col-12">
+					<h3>Directors</h3>
+					<p id="directors"></p>
+				</div>
+				<span class="clearfix"></span>
+				<div class="col-12">
+					<h3>Producers</h3>
+					<p id="producers"></p>
+				</div>
+				<span class="clearfix"></span>
+				<div class="col-12">
+					<h3>Writers</h3>
+					<p id="writers"></p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<h3>Gallery</h3>
+				<div class="row wrapper" id="gallery">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<span class="clearfix"></span>
+	
+	<!-------------------Reservation----------------------------->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form name="formdata" action="" onsubmit="return init()" method="post">
+			  <div class="form-row">
+				<div class="form-group col-md-6">
+				  <label for="inputname4">Your name</label>
+				  <input type="text" class="form-control" id="inputname4" placeholder="Full name" name ="fullName">
+				</div>
+				<div class="form-group col-md-6">
+				  <label for="inputEmail4">Email</label>
+				  <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name ="Email">
+				</div>
+			  </div>
+			  <div class="form-row">
+			  <div class="form-group col-md-9">
+				<label for="inputmovietitle">Movie</label>
+				  <select id="inputmovietitle" class="form-control">
+				  </select>
+			  </div>
+				<div class="form-group col-md-3">
+				  <label for="inputseats">Seats</label>
+				  <select id="inputseats" class="form-control">
+				  </select>
+				</div>
+				</div>
+			  <div class="form-group">
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" id="gridCheck">
+				  <label class="form-check-label" for="gridCheck">
+					Send me a confirmation email
+				  </label>
+				</div>
+			  </div>
+			  <button type="submit" class="btn btn-primary" onclick="init()">Submit</button>
+			</form>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	<!-------------------Reservation----------------------------->
+	
+	<footer id="about" class="page-footer blue pt-4" style="background: black;
+						color: white;">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">Sign up for our newsletters</h5>
+		  <form class="input-group">
+            <input type="text" class="form-control form-control-sm" placeholder="Your email"
+			aria-label="Your email" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-outline-danger my-0" type="button">Sign up</button>
+            </div>
+          </form>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3 right">
+
+			
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Main menu</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <i class="right"></i><i class="right"></i><a href="index.html">  Home</a>
+              </li>
+              <li>
+                <i class="right"></i><i class="right"></i><a href="#moviesschedule">  Movies</a>
+              </li>
+              <li>
+                <i class="right"></i><i class="right"></i><a data-toggle="modal" data-target="#exampleModal">  Reservation</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">©2019 Copyright:
+      <a href="#"> Othniel Idohou</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+	
+	
+	<script src="js/myscript.js"></script>
+	<script> 
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	}
+
+			function getUrlParam(parameter, defaultvalue){
+				var urlparameter = defaultvalue;
+				if(window.location.href.indexOf(parameter) > -1){
+					urlparameter = getUrlVars()[parameter];
+					}
+				return urlparameter;
+			}
+			
+			var mytext = getUrlParam('movie');
+			var titlem = document.getElementById("title");
+			var actoritems= [];
+			var produceritems= [];
+			var directoritems= [];
+			var writeritems= [];
+			var typeitems= [];
+			var dateitems= [];
+			var showtimeitems= [];
+			
+			 $.getJSON("data/moviedata.json",function(data){   
+			data.movies.forEach( function(d) { 
+			if(d.movieId == mytext){
+				
+				document.getElementById("title").innerHTML = d.title;
+				document.getElementById("author").innerHTML = "Author: "+d.author;
+				d.types.forEach(function(t){
+					typeitems.push(' '+t.type);
+					document.getElementById("type").innerHTML = typeitems;
+				});
+				d.date.forEach(function(dat){
+					dateitems.push(' '+dat.day+' '+dat.month);
+					document.getElementById("date").innerHTML = dateitems;
+				});
+				d.date.forEach(function(dat){
+					dat.showtimes.forEach(function(da){
+						showtimeitems.push(' '+da.showtime);
+						document.getElementById("showtime").innerHTML ="Showtimes: "+showtimeitems;
+					});
+					
+				});
+				document.getElementById("image").style.background= "url("+d.coverimage+") center/cover no-repeat";
+				
+				document.getElementById("synopsis").innerHTML = d.synopsis;
+				d.cast.forEach(function(c){
+					actoritems.push(' '+c.actorname);
+					document.getElementById("cast").innerHTML = actoritems;
+				});
+				d.directors.forEach(function(dir){
+					directoritems.push(' '+dir.directname);
+					document.getElementById("directors").innerHTML = directoritems;
+				});
+				d.producers.forEach(function(prod){
+					produceritems.push(' '+prod.producername);
+					document.getElementById("producers").innerHTML =produceritems;
+				});
+				d.writers.forEach(function(w){
+					writeritems.push(' '+w.writername);
+					document.getElementById("writers").innerHTML =writeritems;
+				});
+				document.getElementById("cont").style.background= "url("+d.gallery[0].image+") center/cover no-repeat";
+				d.gallery.forEach(function(g){
+					var divimage = document.createElement('div');
+					divimage.classname = "col-lg-3 col-sm-6 col-md-6 imagegallery";
+					divimage.style.background= "url("+g.image+") center/cover no-repeat";
+					divimage.style.height = "150px";
+					divimage.style.width = "150px";
+					divimage.style.margin = "3px";
+					document.getElementById("gallery").append(divimage);
+				});
+			}
+		});
+		});
+	</script>
+	
+	<script>
+		var select = document.getElementById("inputmovietitle");
+		var selectseat = document.getElementById("inputseats");
+		var i;
+           $.getJSON('data/moviedata.json', function(data){
+				data.movies.forEach(function(d){
+				var option = document.createElement("OPTION");
+					option.innerHTML = d.title;
+					select.options.add(option);
+				});
+		   });
+		   
+		   for(i = 1; i <=10; i++){
+				var option = document.createElement("OPTION");
+					option.innerHTML = i;
+					selectseat.options.add(option);
+		   }
+	</script>
+	
+		</body>
+</html>
+
+
+

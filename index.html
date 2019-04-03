@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SITE TITTLE -->
+  <title>Brooklyn Outdoor Film Festival</title>
+  <!-- bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+  
+</head>
+	<body >
+		
+		 <nav class=" navigation navbar navbar-expand-lg navbar-light " id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">Brooklyn Outdoor Film Festival</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#moviesschedule">Movies</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link " data-toggle="modal" data-target="#exampleModal" >Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+       <!-- Header -->
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTkyNDE2OTg3N15BMl5BanBnXkFtZTgwMzMzMDQxNzM@._V1_SY1000_CR0,0,1499,1000_AL_.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>The Upside</h2>
+              <p>THE UPSIDE is director Neil Burger's heartfelt comedy about a recently paroled ex-convict (Kevin Hart) who strikes up an unlikely friendship with a paralyzed billionaire (Bryan Cranston). 
+			  The film also stars Nicole Kidman, Julianna Margulies and Aja Naomi King.</p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTc3OTA4Mjk0NV5BMl5BanBnXkFtZTgwODI1OTE2NjM@._V1_SX1777_CR0,0,1777,998_AL_.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Cold Pursuit</h2>
+              <p>Nels Coxman (Liam Neeson) is a local snowplow operator recently named Citizen of the Year of his small Colorado ski town for keeping the roads open through the winter. 
+			  Nels' quiet life with his wife (Laura Dern) abruptly spins out of control when their son is unjustly murdered by a local drug cartel. Taking the law into his own hands with only the tools of an outdoorsman and snowplow driver, Nels sets out to find those responsible but inadvertently ignites a gang war that threatens to engulf the town- unless he ends it first.</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTk2NzU1ODQ1Ml5BMl5BanBnXkFtZTgwNjE5Mjc0NjM@._V1_SX1777_CR0,0,1777,938_AL_.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Alita: Battle Angel</h2>
+              <p>From visionary filmmakers James Cameron (AVATAR) and Robert Rodriguez (SIN CITY), comes ALITA: BATTLE ANGEL, an epic adventure of hope and empowerment. When Alita (Rosa Salazar) awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido (Christoph Waltz), a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past. </p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+	<span class="clearfix"></span>
+	<!-- Section  -->
+	<section class="container">
+	<div id="moviesschedule" class="mov pt-5">
+	<p class="subtitle fancy pt-5 pb-5" style="background: black;
+						color: white;"><span>Movies</span></p>
+		<!------------------------------------------------------------------------------------------------------->
+		<div class="filter wrapper mt-3 pt-4">
+			<button data-name='*' class="btn btn-outline-secondary active">All movies</button>
+			<button data-name=".Aug5" class="btn btn-outline-secondary">August 5th</button>
+			<button data-name=".Aug6" class="btn btn-outline-secondary">August 6th</button>
+			<button data-name=".Aug7" class="btn btn-outline-secondary">August 7th</button>
+			<button data-name=".Aug8" class="btn btn-outline-secondary">August 8th</button>
+		</div>
+		
+
+		<!------------------------------------------------------------------------------------------------------->
+			<!--Carousel-->
+		<div  class="grid mb-5 pb-3">
+			<div class="grid-item Aug5 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/22999_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">5 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Kevin Feige</span><h1 class="title"><a href="details.html?movie=1">Captain Marvel</a></h1><p class="text">Set in the 1990s, Marvel Studios' CAPTAIN MARVEL is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe that follows the journey of Carol Danvers as she becomes one of the universe's most powerful heroes. While a galactic war between two alien races reaches Earth, Danvers finds herself and a small cadre of allies at the center of the maelstrom.</p><a href="details.html?movie=1" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug5 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/20810_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">5 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">T.J. Miller</span><h1 class="title"><a href="details.html?movie=2">How To Train Your Dragon: The Hidden World</a></h1><p class="text">From DreamWorks Animation comes the highly anticipated culmination of one of the most popular animated franchises in film history, HOW TO TRAIN YOUR DRAGON: THE HIDDEN WORLD. What began as an unlikely friendship between an adolescent Viking and a fearsome Night Fury dragon has become an epic trilogy spanning their lives. In this next chapter, Hiccup and Toothless will finally discover their true destinies: the village chief as ruler of Berk alongside Astrid, and the dragon as leader of his own kind. As both ascend, the darkest threat they've yet faced--as well as the appearance of a female Night Fury--will test the bonds of their relationship like never before.</p><a href="details.html?movie=2" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug5 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/29521_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">5 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Mikki Daughtry</span><h1 class="title"><a href="details.html?movie=3">Five Feet Apart</a></h1><p class="text">Stella Grant (Haley Lu Richardson) is every bit a seventeen-year-old…she's attached to her laptop and loves her best friends. But unlike most teenagers, she spends much of her time living in a hospital as a Cystic Fibrosis patient. Her life is full of routines, boundaries and self-control – all of which is put to the test when she meets an impossibly charming fellow CF patient named Will Newman (Cole Sprouse). There's an instant flirtation, though restrictions dictate that they must maintain a safe distance between them. As their connection intensifies, so does the temptation to throw the rules out the window and embrace that attraction. Further complicating matters is Will's potentially dangerous rebellion against his ongoing medical treatment. Stella gradually inspires Will to live life to the fullest, but can she ultimately save the person she loves when even a single touch is off limits?</p><a href="details.html?movie=3" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug6 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/30100_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">6 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Frank Baldwin</span><h1 class="title"><a href="details.html?movie=4">Cold Pursuit</a></h1><p class="text">Nels Coxman (Liam Neeson) is a local snowplow operator recently named Citizen of the Year of his small Colorado ski town for keeping the roads open through the winter. Nels' quiet life with his wife (Laura Dern) abruptly spins out of control when their son is unjustly murdered by a local drug cartel. Taking the law into his own hands with only the tools of an outdoorsman and snowplow driver, Nels sets out to find those responsible but inadvertently ignites a gang war that threatens to engulf the town- unless he ends it first.</p><a href="details.html?movie=4" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug6 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/21746_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">6 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">James Cameron</span><h1 class="title"><a href="details.html?movie=5">Alita: Battle Angel</a></h1><p class="text">From visionary filmmakers James Cameron (AVATAR) and Robert Rodriguez (SIN CITY), comes ALITA: BATTLE ANGEL, an epic adventure of hope and empowerment. When Alita (Rosa Salazar) awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido (Christoph Waltz), a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past. As Alita learns to navigate her new life and the treacherous streets of Iron City, Ido tries to shield her from her mysterious history while her street-smart new friend Hugo (Keean Johnson) offers instead to help trigger her memories. But it is only when the deadly and corrupt forces that run the city come after Alita that she discovers a clue to her past a' she has unique fighting abilities that those in power will stop at nothing to control. If she can stay out of their grasp, she could be the key to saving her friends, her family and the world sheas grown to love. Based on the graphic novel 'manga' series 'Gunnm by Yukito Kishiro.</p><a href="details.html?movie=5" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug6 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/28159_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">6 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Christopher B. Landon</span><h1 class="title"><a href="details.html?movie=6">Happy Death Day 2U</a></h1><p class="text">Jessica Rothe leads the returning cast of HAPPY DEATH DAY 2U, the follow-up to Blumhouseas (Split, Get Out, The Purge series) surprise 2017 smash hit of riveting, repeating twists and comic turns. This time, our hero Tree (Rothe) discovers that dying over and over was surprisingly easier than the dangers that lie ahead. Jason Blum once again produces and Christopher Landon returns to write and direct this next chapter, while Happy Death Day executive producers Angela Mancuso and John Baldecchi are newly joined by EP Samson Mucke (Scouts Guide to the Zombie Apocalypse).</p><a href="details.html?movie=6" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug7 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/27465_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">7 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Erin Cardillo</span><h1 class="title"><a href="details.html?movie=7">Isn't It Romantic</a></h1><p class="text">From New Line Cinema comes the romantic comedy ISN'T IT ROMANTIC, starring Rebel Wilson ('How to Be Single,' the 'Pitch Perfect' films), Liam Hemsworth (the 'Hunger Games' films), Adam Devine ('The Intern,' the 'Pitch Perfect' films) and Priyanka Chopra ('Quantico,' 'Baywatch'), under the direction of Todd Strauss-Schulson ('A Very Harold & Kumar 3D Christmas,' 'The Final Girls'). New York City architect Natalie works hard to get noticed at her job but is more likely to be asked to deliver coffee and bagels than to design the city's next skyscraper. And if things weren't bad enough, Natalie, a lifelong cynic when it comes to love, has an encounter with a mugger that renders her unconscious, waking to discover that her life has suddenly become her worst nightmare--a romantic comedy--and she is the leading lady.</p><a href="details.html?movie=7" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug7 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/28308_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">7 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Tina Gordon Chism</span><h1 class="title"><a href="details.html?movie=8">What Men Want</a></h1><p class="text">Inspired by the Nancy Meyers hit romantic comedy WHAT WOMEN WANT, this film follows the story of a female sports agent (Henson) who has been constantly boxed out by her male colleagues. When she gains the power to hear mens' thought, she is able to shift the paradigm to her advantage as she races to sign the NBA's next superstar.</p><a href="details.html?movie=8" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug7 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/27641_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">7 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Jon Hartmere</span><h1 class="title"><a href="details.html?movie=9">The Upside</a></h1><p class="text">THE UPSIDE is director Neil Burger's heartfelt comedy about a recently paroled ex-convict (Kevin Hart) who strikes up an unlikely friendship with a paralyzed billionaire (Bryan Cranston). The film also stars Nicole Kidman, Julianna Margulies and Aja Naomi King.</p><a href="details.html?movie=9" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug8 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://mediafiles.cineplex.com/Central/Film/Posters/23805_320_470.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">8 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Phil Lord, Rodney Rothman</span><h1 class="title"><a href="details.html?movie=10">Spider-Man: Into The Spider-Verse</a></h1><p class="text">Phil Lord and Christopher Miller, the creative minds behind THE LEGO MOVIE and 21 JUMP STREET, bring their unique talents to a fresh vision of a different Spider-Man Universe, with a groundbreaking visual style that's the first of its kind. SPIDER-MAN: INTO THE SPIDER-VERSE introduces Brooklyn teen Miles Morales, and the limitless possibilities of the Spider-Verse, where more than one can wear the mask.</p><a href="details.html?movie=10" class="button">Read more</a></div></div></div></div></div></div>
+			<div class="grid-item Aug8 col-lg-3 col-sm-6 col-md-4 col-xs-6"><div class="movie"><div class="example-2 card"><div class="cover card1" style="background: url(&quot;https://media.baselineresearch.com/images/1881512/1881512_medium.jpg&quot;) center center / cover no-repeat;"><div class="header"><div class="date"><span class="day">8 </span><span class="month">August</span></div></div><div class="data"><div class="content"><span class="author">Jordan Peele</span><h1 class="title"><a href="details.html?movie=11">Us (2019)</a></h1><p class="text">After sending shockwaves across contemporary culture and setting a new standard for provocative, socially-conscious horror films with his directorial debut, Get Out, Academy Award-winning visionary Jordan Peele returns with another original nightmare that he has written, directed and produced. Set in present day along the iconic Northern California coastline, Us, from Monkeypaw Productions, stars Oscar winner Lupita Nyong'o as Adelaide Wilson, a woman returning to her beachside childhood home with her husband, Gabe (Black Panther's Winston Duke), and their two children (Shahadi Wright Joseph, Evan Alex) for an idyllic summer getaway. Haunted by an unexplainable and unresolved trauma from her past and compounded by a string of eerie coincidences, Adelaide feels her paranoia elevate to high-alert as she grows increasingly certain that something bad is going to befall her family.</p><a href="details.html?movie=11" class="button">Read more</a></div></div></div></div></div></div>
+		</div>
+	</div>
+		<span class="clearfix"></span>
+	<!--Carousel-->	
+	
+	<!-------------------Reservation----------------------------->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form name="formdata" action="" onsubmit="return init()" method="post">
+			  <div class="form-row">
+				<div class="form-group col-md-6">
+				  <label for="inputname4">Your name</label>
+				  <input type="text" class="form-control" id="inputname4" placeholder="Full name" name ="fullName">
+				</div>
+				<div class="form-group col-md-6">
+				  <label for="inputEmail4">Email</label>
+				  <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name ="Email">
+				</div>
+			  </div>
+			  <div class="form-row">
+			  <div class="form-group col-md-9">
+				<label for="inputmovietitle">Movie</label>
+				  <select id="inputmovietitle" class="form-control">
+				  </select>
+			  </div>
+				<div class="form-group col-md-3">
+				  <label for="inputseats">Seats</label>
+				  <select id="inputseats" class="form-control">
+				  </select>
+				</div>
+				</div>
+			  <div class="form-group">
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" id="gridCheck">
+				  <label class="form-check-label" for="gridCheck">
+					Send me a confirmation email
+				  </label>
+				</div>
+			  </div>
+			  <button type="submit" class="btn btn-primary" onclick="init()">Submit</button>
+			</form>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	
+	</section>
+	<span class="clearfix"></span>
+	<!-------------------Reservation----------------------------->
+	<!-------------------About----------------------------->
+	<section id="about" class="mb-1" style="background: black;
+						color: white;" >
+		<div class="container pt-4 pb-4" >
+			<p class="subtitle fancy"><span>About</span></p>
+			<div class="pt-4 pb-5 about-text">
+				<h5 class="text-uppercase">Brooklyn Outdoor Film Festival</h5>
+				<p>The Brooklyn Outdoor Film Festival (BOFF), is an International, competitive festival. BFF mission is to provide a public forum in Brooklyn 
+					in order to advance public interest in films and the independent production of films. To draw worldwide attention to Brooklyn as a 
+					center for cinema. To encourage the rights of all Brooklyn residents to 
+					access and experience the power of independent filmmaking, and to promote 
+					artistic excellence and the creative freedom of artists without censure. 
+					BFF, inc. is a not-for-profit organization.</p>
+				<div class="row">
+					<div class="col-6 col-xs-12">
+						<img src="img/1.jpg" class="img-fluid rounded">
+					</div>
+					<div class="col-6 col-xs-12">
+						<img src="img/2.jpg" class="img-fluid rounded">
+					</div>
+				</div>
+			</div>
+		</div>
+			
+	</section>
+		<!-------------------About----------------------------->
+	
+	<footer  class="page-footer pt-5 pb-5" style="background: black;
+						color: white;">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+		  <h5 class="text-uppercase">Sign up for our newsletters</h5>
+		  <form class="input-group">
+            <input type="text" class="form-control form-control-sm" placeholder="Your email"
+			aria-label="Your email" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-outline-danger my-0" type="button">Sign up</button>
+            </div>
+          </form>
+		  
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3 right">
+
+			
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Main menu</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <i class="right"></i><i class="right"></i><a href="index.html">  Home</a>
+              </li>
+              <li>
+                <i class="right"></i><i class="right"></i><a href="#moviesschedule">  Movies</a>
+              </li>
+              <li>
+                <i class="right"></i><i class="right"></i><a data-toggle="modal" data-target="#exampleModal">  Reservation</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-2">©2019 Copyright:
+      <a href="#"> Othniel Idohou</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+		
+	<!--Scripts for Json file data display-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="js/myscript.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+	
+	<script>
+      
+     var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+          name: function (element) {
+            return $(element).text();
+          }
+        }
+      });
+      $('.filter button').on("click", function () {
+        var value = $(this).attr('data-name');
+          $grid.isotope({
+            filter: value
+          });
+        $('.filter button').removeClass('active');
+        $(this).addClass('active');
+      })
+	  
+	  
+		var select = document.getElementById("inputmovietitle");
+		var selectseat = document.getElementById("inputseats");
+		var i;
+           $.getJSON('data/moviedata.json', function(data){
+				data.movies.forEach(function(d){
+				var option = document.createElement("OPTION");
+					option.innerHTML = d.title;
+					select.options.add(option);
+				});
+		   });
+		   
+		   for(i = 1; i <=10; i++){
+				var option = document.createElement("OPTION");
+					option.innerHTML = i;
+					selectseat.options.add(option);
+		   }
+	
+    </script>
+	
+	</body>
+</html>
+
+
+
